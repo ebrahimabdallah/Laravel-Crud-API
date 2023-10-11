@@ -19,8 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('student',StudentController::class);
-Route::get('Search',[StudentController::class,'Search']);
-Route::get('/dashboard', function () {
+ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
